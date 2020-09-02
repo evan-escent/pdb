@@ -2,6 +2,12 @@
 @section('content')
 
 <div class=container>
+	<nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Todos Finished</li>
+        </ol>
+    </nav>
 	<div class="card">
 		@if(Auth::check())
 			@foreach($user->Todo_list as $todo_list)

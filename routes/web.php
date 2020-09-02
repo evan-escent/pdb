@@ -41,3 +41,5 @@ Route::get('/todos_finsh', 'TodosController@check_finish');
 
 Route::get('/list/create', 'TodosController@add_list');
 Route::post('/list/create', 'TodosController@create_list');
+
+Route::get('/list/delete/{list}', "TodosController@delete_list");

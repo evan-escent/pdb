@@ -2,10 +2,24 @@
 @section('content')
 
 <div class=container>
+	<nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Todos</li>
+        </ol>
+    </nav>
 	<div class="card">
 		@if(Auth::check())
 			@foreach($user->Todo_list as $todo_list)
-			<div class="card-header">{{$todo_list->name}}</div>
+			<div class="card-header">
+				{{$todo_list->name}}
+				<button class="list-cog" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-cog"></i>
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="/list/delete/{{$todo_list->id}}">Delete</a>
+				</div>
+			</div>
 			<div class="card-body">
 				<table classs="table mt-4">
 					<thead>
@@ -18,13 +32,13 @@
 					<tbody>
 						@foreach($todo_list->Todos as $todo)
 							<tr>
-								<td colspan="1">
+								<td>
 									{{$todo->description}}
 								</td>
-								<td colspan="1">
+								<td>
 									{{$todo->created_at}}
 								</td>
-								<td colspan="1">
+								<td>
 									<form action="/todos/edit/{{$todo->id}}">
 										<button type="submit" name="edit" class="btn btn-secondary">Edit</button>
 										<button type="submit" name="delete" formmethod="POST" class="btn btn-danger">Delete</button>

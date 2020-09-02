@@ -588,7 +588,7 @@ pre code {
 @media (min-width: 576px) {
   .container-sm,
   .container {
-    max-width: 540px;
+    max-width: 100%;
   }
 }
 
@@ -596,7 +596,7 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 720px;
+    max-width: 100%;
   }
 }
 
@@ -605,7 +605,7 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 960px;
+    max-width: 100%;
   }
 }
 
@@ -5003,7 +5003,7 @@ input[type=button].btn-block {
 }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -17110,4 +17110,16 @@ a[data-toggle="collapse"] {
 #navbarDropdown {
   display: inline-block;
   margin-right: 30px;
+}
+
+.list-cog {
+  display: inline-block;
+  float:right;
+  padding: 0px 5px;
+}
+
+.page-footer {
+  background-color: #212529;
+  width: 100%;
+  padding: 10px;
 }

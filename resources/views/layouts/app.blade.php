@@ -118,6 +118,14 @@
                 @yield('content')
             </main>
         </div>
+
+        <footer class="page-footer">
+            <div class="container">
+                <form></form>
+                <a href="#">Eng</a>
+                <a href="#">中文</a>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
