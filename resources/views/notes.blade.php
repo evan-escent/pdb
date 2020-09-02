@@ -12,6 +12,8 @@
 				<thead>
 					<tr>
 						<th colspan="1">Notes</th>
+						<th colspan="1">Created At</th>
+						<th colspan="1">Updated At</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -20,6 +22,8 @@
 						<td>
 							<a href="/notes/{{$note->id}}">{{$note->title}}</a>
 						</td>
+						<td>{{$note->created_at}}</td>
+						<td>{{$note->updated_at}}</td>
 						<td>
 							<form action="/notes/{{$note->id}}">
 								<button type="submit" name="delete" formmethod="POST" class="btn btn-danger">Delete</button>

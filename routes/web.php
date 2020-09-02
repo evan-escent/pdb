@@ -29,13 +29,13 @@ Route::post('/todos/{todo_list_id}', 'TodosController@create');
 Route::get('/todos/edit/{todos}', 'TodosController@edit');
 Route::post('/todos/edit/{todos}', 'TodosController@update');
 
-Route::get('/notes', 'TodosController@notes');
+Route::get('/notes', 'NotesController@notes');
 
-Route::get('/notes/add', 'TodosController@add_notes');
-Route::post('/notes/add', 'TodosController@create_notes');
+Route::get('/notes/add', 'NotesController@add_notes');
+Route::post('/notes/add', 'NotesController@create_notes');
 
-Route::get('/notes/{notes}', 'TodosController@detail_notes');
-Route::post('/notes/{notes}', 'TodosController@update_notes');
+Route::get('/notes/{notes}', 'NotesController@detail_notes');
+Route::post('/notes/{notes}', 'NotesController@update_notes');
 
 Route::get('/todos_finsh', 'TodosController@check_finish');
 

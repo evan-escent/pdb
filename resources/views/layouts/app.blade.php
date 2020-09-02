@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -109,7 +108,7 @@
                             </ul>                    
                         </li>
                         <li>
-                            <a href="#"><i class="fas fa-sticky-note fa-lg"></i> Note</a>
+                            <a href="/notes"><i class="fas fa-sticky-note fa-lg"></i> Note</a>
                         </li>
                     </ul>
                 </nav>

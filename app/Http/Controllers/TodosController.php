@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Todos;
 use App\Todos_finish;
-use App\Note;
 use App\Todo_list;
 use Auth;
 
