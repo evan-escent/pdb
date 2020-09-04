@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
+        "acaronlex/laravel-calendar": "^1.1",
         "components/font-awesome": "^5.14",
         "fideloper/proxy": "^4.2",
         "fortawesome/font-awesome": "^5.14",

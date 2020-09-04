@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function notes() {
         return $this->hasMany(Note::class);
     }
+
+    public function calender_event() {
+        return $this->hasMany(Calender_event::class);
+    }
 }

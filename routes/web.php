@@ -43,3 +43,8 @@ Route::get('/list/create', 'TodosController@add_list');
 Route::post('/list/create', 'TodosController@create_list');
 
 Route::get('/list/delete/{list}', "TodosController@delete_list");
+
+Route::get('/calendar', 'CalenderController@index');
+Route::post('/calendar/create', 'CalenderController@create');
+Route::post('/calendar/update', 'CalenderController@update');
+Route::post('/calendar/destroy', 'CalenderController@destroy');

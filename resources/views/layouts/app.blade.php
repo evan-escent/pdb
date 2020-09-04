@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -91,7 +92,7 @@
             @auth
                 <nav id="sidebar">
                     <div class="sidebar-header">
-                        <h3>Sidebar Header</h3>
+                        <h3>Dashboard</h3>
                     </div>
 
                     <ul class="navbar-nav">
@@ -109,6 +110,9 @@
                         </li>
                         <li>
                             <a href="/notes"><i class="fas fa-sticky-note fa-lg"></i> Note</a>
+                        </li>
+                        <li>
+                            <a href="/calendar"><i class="fas fa-calendar-alt fa-lg"></i> Calender</a>
                         </li>
                     </ul>
                 </nav>
