@@ -3,8 +3,17 @@
 @section('content')
 
 <div class="container">
-	<h2>Add New Task</h2>
-
+	<nav aria-label="breadcrumb">
+    	<ol class="breadcrumb">
+        	<li class="breadcrumb-item"><a href="/home">Home</a>
+			</li>
+			<li class="breadcrumb-item"><a href="/todos">Todo</a>
+			</li>
+        	<li class="breadcrumb-item active" aria-current="
+			page">Add</li>
+    	</ol>
+	</nav>
+    <h2>Add New Todo</h2>
 	<form method="POST" action="/todos/{{$list->id}}">
 		<div class="form-group">
 			<textarea name="description" class="form-control"></textarea>

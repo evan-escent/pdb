@@ -53,12 +53,12 @@
 				<a href="/todos/{{$todo_list->id}}" class="btn btn-primary">ADD</a>
 			</div>
 			@endforeach
-			<a href="/list/create" class="btn btn-primary">CREATE TODO LIST</a>
 		@else
 			<div class="card-body">
 				<h3>You need to log in. <a href="/login">Click here to login</a></h3>
 			</div>
 		@endif
 	</div>
+	<a href="/list/create" class="btn btn-primary">CREATE TODO LIST</a>
 </div>
 @endsection
