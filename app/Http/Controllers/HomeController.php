@@ -25,4 +25,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function page_not_found() {
+        return view('page_not_found');
+    }
 }

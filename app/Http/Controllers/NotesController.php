@@ -28,11 +28,15 @@ class NotesController extends Controller
     }
 
     public function detail_notes($note_id) {
-        $note = Note::where('id', $note_id)->first();
-        if(Auth::check() && Auth::user()->id == $note->user_id) { 
-            return view('note_detail', compact('note'));
+        if (Note::where('id', $note_id)->exists()) {
+            $note = Note::where('id', $note_id)->first();
+            if(Auth::check() && Auth::user()->id == $note->user_id) { 
+                return view('note_detail', compact('note'));
+            } else {
+                return redirect('/page_not_found');
+            }
         } else {
-            return redirect('/');
+            return redirect('/page_not_found');
         }
     }
 

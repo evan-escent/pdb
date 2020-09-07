@@ -57,3 +57,6 @@ Route::post('/calendar/destroy', 'CalenderController@destroy');
 
 //localization
 Route::get('/lang/{lang}', 'LocaleController@index');
+
+//page not found
+Route::get('/page_not_found', 'HomeController@page_not_found');

@@ -33,13 +33,18 @@ class TodosController extends Controller
     }
 
     public function edit($todo_id) {
-        $todo = Todos::where('id', $todo_id)->first();
-        $list = Todo_list::where('id', $todo->todo_list_id)->first();
-    	if(Auth::check() && Auth::user()->id == $list->user_id) {   
-    		return view('edit', compact('todo'));
-    	} else {
-    		return redirect('/');
-    	}
+        if (Todos::where('id', $todo_id)->exists()) {
+            $todo = Todos::where('id', $todo_id)->first();
+            $list = Todo_list::where('id', $todo->todo_list_id)->first();
+
+            if(Auth::check() && Auth::user()->id == $list->user_id) {   
+                return view('edit', compact('todo'));
+            } else {
+                return redirect('/page_not_found');
+            }
+        } else {
+            return redirect('/page_not_found');
+        }
     }
 
     public function update(Request $request, $todo_id) {
