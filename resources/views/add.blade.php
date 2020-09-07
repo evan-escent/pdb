@@ -16,7 +16,7 @@
     <h2>Add New Todo</h2>
 	<form method="POST" action="/todos/{{$list->id}}">
 		<div class="form-group">
-			<textarea name="description" class="form-control"></textarea>
+			<textarea name="description" class="form-control" style="height:30vh;"></textarea>
 			@if($errors->has('description'))
 				<span class="text-danger">{{$errors->first('description')}}</span>
 			@endif

@@ -19,8 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//home
 Route::get('/home', 'HomeController@index')->name('home');
 
+//todo
 Route::get('/todos', 'TodosController@index');
 
 Route::get('/todos/{todo_list_id}', 'TodosController@add');
@@ -29,6 +31,10 @@ Route::post('/todos/{todo_list_id}', 'TodosController@create');
 Route::get('/todos/edit/{todos}', 'TodosController@edit');
 Route::post('/todos/edit/{todos}', 'TodosController@update');
 
+//todo_finish
+Route::get('/todos_finsh', 'TodosController@check_finish');
+
+//notes
 Route::get('/notes', 'NotesController@notes');
 
 Route::get('/notes/add', 'NotesController@add_notes');
@@ -37,14 +43,17 @@ Route::post('/notes/add', 'NotesController@create_notes');
 Route::get('/notes/{notes}', 'NotesController@detail_notes');
 Route::post('/notes/{notes}', 'NotesController@update_notes');
 
-Route::get('/todos_finsh', 'TodosController@check_finish');
-
+//todo list
 Route::get('/list/create', 'TodosController@add_list');
 Route::post('/list/create', 'TodosController@create_list');
 
 Route::get('/list/delete/{list}', "TodosController@delete_list");
 
+//calender
 Route::get('/calendar', 'CalenderController@index');
 Route::post('/calendar/create', 'CalenderController@create');
 Route::post('/calendar/update', 'CalenderController@update');
 Route::post('/calendar/destroy', 'CalenderController@destroy');
+
+//localization
+Route::get('/lang/{lang}', 'LocaleController@index');

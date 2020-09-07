@@ -66,13 +66,13 @@
                                     </p>
                                     <a class="dropdown-item" href="#">
                                         <i class="fas fa-address-card"></i>
-                                        Account
+                                        @lang('lang.account')
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         <i class="fas fa-sign-out-alt"></i>
-                                        {{ __('Logout') }}
+                                        @lang('lang.logout')
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -92,27 +92,27 @@
             @auth
                 <nav id="sidebar">
                     <div class="sidebar-header">
-                        <h3>Dashboard</h3>
+                        <h3>@lang('lang.dashboard')</h3>
                     </div>
 
                     <ul class="navbar-nav">
-                        <p>Dummy</p>
+                        <p>@lang('lang.dummy')</p>
                         <li>
-                            <a href="#todoSub" data-toggle="collapse" class="dropdown-toggle"><i class="fas fa-clipboard-list fa-lg"></i> Todo</a>
+                            <a href="#todoSub" data-toggle="collapse" class="dropdown-toggle"><i class="fas fa-clipboard-list fa-lg"></i> @lang('lang.todo')</a>
                             <ul class="collapse list-unstyled" id="todoSub">
                                 <li>
-                                    <a href="/todos" class="sub-item"><i class="fas fa-list fa-lg"></i> Current</a>
+                                    <a href="/todos" class="sub-item"><i class="fas fa-list fa-lg"></i> @lang('lang.current')</a>
                                 </li>
                                 <li>
-                                    <a href="/todos_finsh" class="sub-item"><i class="fas fa-check fa-lg"></i> Complete</a>
+                                    <a href="/todos_finsh" class="sub-item"><i class="fas fa-check fa-lg"></i> @lang('lang.complete')</a>
                                 </li>
                             </ul>                    
                         </li>
                         <li>
-                            <a href="/notes"><i class="fas fa-sticky-note fa-lg"></i> Note</a>
+                            <a href="/notes"><i class="fas fa-sticky-note fa-lg"></i> @lang('lang.note')</a>
                         </li>
                         <li>
-                            <a href="/calendar"><i class="fas fa-calendar-alt fa-lg"></i> Calender</a>
+                            <a href="/calendar"><i class="fas fa-calendar-alt fa-lg"></i> @lang('lang.calendar')</a>
                         </li>
                     </ul>
                 </nav>
@@ -125,9 +125,8 @@
 
         <footer class="page-footer">
             <div class="container">
-                <form></form>
-                <a href="#">Eng</a>
-                <a href="#">中文</a>
+                <a href="lang/en">Eng</a>
+                <a href="lang/zh">中文</a>
             </div>
         </footer>
     </div>

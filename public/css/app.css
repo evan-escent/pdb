@@ -4840,7 +4840,7 @@ input[type=button].btn-block {
 
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
-  color: yellow;
+  color: black;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -4978,7 +4978,7 @@ input[type=button].btn-block {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .card-title {
@@ -17015,6 +17015,7 @@ readers do not read off random characters that represent icons */
 .main-content {
   flex: 70%;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 #sidebar {
@@ -17122,4 +17123,8 @@ a[data-toggle="collapse"] {
   background-color: #212529;
   width: 100%;
   padding: 10px;
+}
+
+#dropdownMenuButton {
+  float:right;
 }
