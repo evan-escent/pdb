@@ -14,14 +14,14 @@
 		@if(Auth::check())
 		<div class="card-header">Notes</div>
 		<div class="card-body">
-			<a href="/notes/add" class="btn btn-primary">Add Note</a>
+			<a href="/notes/add" class="btn btn-primary">@lang('lang.add_note')</a>
 
 			<table class="table mt-4">
 				<thead>
 					<tr>
-						<th colspan="1">Notes</th>
-						<th colspan="1">Created At</th>
-						<th colspan="1">Updated At</th>
+						<th colspan="1">@lang('lang.note')</th>
+						<th colspan="1">@lang('lang.create_at')</th>
+						<th colspan="1">@lang('lang.update_at')</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -34,7 +34,7 @@
 						<td>{{$note->updated_at}}</td>
 						<td>
 							<form action="/notes/{{$note->id}}">
-								<button type="submit" name="delete" formmethod="POST" class="btn btn-danger">Delete</button>
+								<button type="submit" name="delete" formmethod="POST" class="btn btn-danger">@lang('lang.delete')</button>
 								{{csrf_field()}}
 							</form>
 						</td>
