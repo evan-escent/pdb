@@ -10,11 +10,11 @@
     </nav>
 	<div class="list">
 		@if(Auth::check())
-		<div class="accordion" role="tablist" aria-multiselectable="true">
+		<div class="accordion">
 			@foreach($user->Todo_list as $todo_list)
 			<div class="card" style="margin-bottom: 20px;">
-				<div class="card-header" role="tab" id="heading{{$todo_list->id}}">
-					<button class="btn btn-dark" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$todo_list->id}}" aria-expanded="true" aria-controls="collapse{{$todo_list->id}}">{{$todo_list->name}}</button>
+				<div class="card-header">
+					{{$todo_list->name}}
 					
 					<button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-cog"></i>
@@ -24,7 +24,7 @@
 					</div>
 				</div>
 
-				<div id="collapse{{$todo_list->id}}" class="collapse show" aria-labelledby="heading{{$todo_list->id}}" data-parent="#accordion">
+				<div>
 					<div class="card-body" style="padding-top: 0;">
 						<table class="table mt-4" style="margin-top:  15px !important;">
 							<thead>

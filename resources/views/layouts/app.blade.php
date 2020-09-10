@@ -112,7 +112,7 @@
                             <a href="/notes"><i class="fas fa-sticky-note fa-lg"></i> @lang('lang.note')</a>
                         </li>
                         <li>
-                            <a href="/calendar"><i class="fas fa-calendar-alt fa-lg"></i> @lang('lang.calendar')</a>
+                            <a href="#"><i class="fas fa-calendar-alt fa-lg"></i> @lang('lang.calendar')</a>
                         </li>
                     </ul>
                 </nav>
