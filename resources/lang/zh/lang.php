@@ -15,13 +15,20 @@
 
 		//todos
 		"todos" => "待辦",
-		"create_date" => "創建日期",
+		"create_at" => "創建日期",
 		"action" => "操作",
 		"edit_todo" => "更改",
-		"delete_todo" => "刪除",
+		"delete" => "刪除",
 		"finish_todo" => "完成",
 		"add_todo" => "加待辦",
 		"create_list" => "創建列表",
 		"delete_list" => "刪除列表",
+
+		//todos_finish
+		"finish_at" => "完成日期",
+
+		//note
+		"add_note" => "添加筆記",
+		"update_at" => "更新日期",
 	];
 ?>
