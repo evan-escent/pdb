@@ -16,9 +16,9 @@
 				<table class="table mt-4" style="margin-top:  15px !important;">
 					<thead>
 						<tr>
-							<th class="col-7">@lang('lang.todo')</th>
-							<th class="col-2">@lang('lang.create_at')</th>
-							<th class="col-2">@lang('lang.finish_at')</th>
+							<th class="col-7">Todos</th>
+							<th class="col-2">Created Date</th>
+							<th class="col-2">Finish Date</th>
 						</tr>
 					</thead>
 					<tbody>
