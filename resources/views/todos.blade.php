@@ -12,9 +12,9 @@
 		@if(Auth::check())
 		<div class="accordion">
 			@foreach($user->Todo_list as $todo_list)
-			<div class="card" style="margin-bottom: 20px;">
+			<div class="card">
 				<div class="card-header">
-					{{$todo_list->name}}
+					<button class="btn btn-dark" data-toggle="collapse" data-target="#collapse{{$todo_list->id}}">{{$todo_list->name}}</button>
 					
 					<button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-cog"></i>
@@ -24,7 +24,7 @@
 					</div>
 				</div>
 
-				<div>
+				<div id="collapse{{$todo_list->id}}" class="collapse show">
 					<div class="card-body" style="padding-top: 0;">
 						<table class="table mt-4" style="margin-top:  15px !important;">
 							<thead>
@@ -67,6 +67,6 @@
 			</div>
 		@endif
 	</div>
-	<a href="/list/create" class="btn btn-info"><i class="fas fa-plus-square"> @lang('lang.create_list')</i></a>
+	<a href="/list/create" class="btn btn-info" style="margin-top: 20px;"><i class="fas fa-plus-square"> @lang('lang.create_list')</i></a>
 </div>
 @endsection
