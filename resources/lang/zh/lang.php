@@ -30,5 +30,15 @@
 		//note
 		"add_note" => "添加筆記",
 		"update_at" => "更新日期",
+
+		//account
+		"my_account" => "我的賬號",
+		"my_details" => "我的資料",
+		"username" => "賬號: ",
+		"change_pass" => "修改密碼",
+		"old_pass" => "舊密碼:",
+		"new_pass" => "新密碼:",
+		"conf_pass" => "確定密碼:",
+		"update_pass" => "修改",
 	];
 ?>

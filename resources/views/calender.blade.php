@@ -9,7 +9,7 @@
 		</div>
 		<div class="panel-body">
 			{{!! $calendar->calendar() !!}}
-			{{!! $calendar->script() !!}}
+			<script>{{!! $calendar->script() !!}}</script>
 		</div>
 	</div>
 </div>

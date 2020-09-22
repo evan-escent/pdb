@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b39014891aa434c1d479960011353d9",
+    "content-hash": "a7f3283a725dd9676cedfb980ce6a7be",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1725,6 +1725,63 @@
                 }
             ],
             "time": "2020-08-09T10:34:01+00:00"
+        },
+        {
+            "name": "maximof/laravel-8-calendar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximof/laravel-8-calendar.git",
+                "reference": "9d839dd3431cc24842769098f8778d78394e5622"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximof/laravel-8-calendar/zipball/9d839dd3431cc24842769098f8778d78394e5622",
+                "reference": "9d839dd3431cc24842769098f8778d78394e5622",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6.0|~7.0|~8.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Maximof\\Laravel8Calendar\\Laravel8CalendarServiceProvider"
+                    ],
+                    "aliases": {
+                        "Laravel8Calendar": "Maximof\\Laravel8Calendar\\Facades\\Laravel8CalendarFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Maximof\\Laravel8Calendar\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Favour Max-Oti",
+                    "email": "maxotif@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel  package wrapper for fullcalendar.io",
+            "homepage": "https://github.com/maximof/laravel-8-calendar",
+            "keywords": [
+                "laravel-8-calendar",
+                "maximof"
+            ],
+            "time": "2020-09-14T20:52:39+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7146,7 +7203,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "maximof/laravel-8-calendar": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -30,5 +30,15 @@
 		//note
 		"add_note" => "Add Note",
 		"update_at" => "Updated At",
+
+		//account
+		"my_account" => "My Account",
+		"my_details" => "My Details",
+		"username" => "Username: ",
+		"change_pass" => "Change Password",
+		"old_pass" => "Old Password:",
+		"new_pass" => "New Password:",
+		"conf_pass" => "Confirm Password:",
+		"update_pass" => "Update",
 		];
 ?>

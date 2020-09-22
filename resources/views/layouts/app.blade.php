@@ -64,7 +64,7 @@
                                     <p class="account-card-text">
                                         {{auth::user()->name}}
                                     </p>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="/account">
                                         <i class="fas fa-address-card"></i>
                                         @lang('lang.account')
                                     </a>
