@@ -17,8 +17,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.1",
-        "maximof/laravel-8-calendar": "dev-master"
+        "laravel/ui": "^2.1"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
@@ -39,7 +38,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Maximof\\Laravel8Calendar\\": "Maximof/Laravel8Calendar/"
         },
         "classmap": [
             "database/seeds",

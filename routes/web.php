@@ -51,9 +51,6 @@ Route::get('/list/delete/{list}', "TodosController@delete_list");
 
 //calender
 Route::get('/calendar', 'CalenderController@index');
-Route::post('/calendar/create', 'CalenderController@create');
-Route::post('/calendar/update', 'CalenderController@update');
-Route::post('/calendar/destroy', 'CalenderController@destroy');
 
 //localization
 Route::get('/lang/{lang}', 'LocaleController@index');
