@@ -17,12 +17,13 @@
 		      document.addEventListener('DOMContentLoaded', function() {
 		        var calendarEl = document.getElementById('calendar');
 		        var calendar = new FullCalendar.Calendar(calendarEl, {
-		          initialView: 'dayGridMonth'
+		        	headerToolbar: {center: 'dayGridMonth,timeGridWeek,timeGridDay'},
 		        });
+		        calendar.setOption()
 		        calendar.render();
 		      });
 			</script>
-			<div id='calendar'></div>
+			<div id='calendar' style='width:70%; margin-left: 10%;'></div>
 		</div>
 	</div>
 </div>
