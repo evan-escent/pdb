@@ -37338,11 +37338,3 @@ module.exports = __webpack_require__(/*! c:\pdb\resources\sass\app.scss */"./res
 /***/ })
 
 /******/ });
-
-$(document).ready(function () {
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
-
-});
