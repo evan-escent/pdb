@@ -17,7 +17,26 @@
 		      document.addEventListener('DOMContentLoaded', function() {
 		        var calendarEl = document.getElementById('calendar');
 		        var calendar = new FullCalendar.Calendar(calendarEl, {
-		        	headerToolbar: {center: 'dayGridMonth,timeGridWeek,timeGridDay'},
+		        	customButtons: {
+		        		addEventButton: {
+		        			text: 'Add Event',
+		        			click: function() {
+		        				window.location.href = "{{ route('calendar_add')}}";
+		        			}
+		        		}
+		        	},
+		        	headerToolbar: {
+		        		left: 'title',
+		        		center: 'dayGridMonth,timeGridWeek,timeGridDay',
+		        		right: 'addEventButton,today,prev,next'},
+		        	events: [
+		        		{
+		        			id: '1',
+		        			title: 'Dummy',
+		        			start: '2020-09-24',
+		        			end: '2020-09-26',
+		        		}
+		        	]
 		        });
 		        calendar.setOption()
 		        calendar.render();
