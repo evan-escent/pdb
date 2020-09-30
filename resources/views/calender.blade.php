@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="container">
@@ -11,10 +10,25 @@
 			page">Calendar</li>
     	</ol>
 	</nav>
+	@if(Auth::check())
 	<div class="panel panel-primary">
 		<div class="panel-body">
+
 			<script type="text/javascript">	
-		      document.addEventListener('DOMContentLoaded', function() {
+				let events = <?php echo (json_encode($events)) ?>;
+				console.log(events);
+
+				let event = new Array();
+				events.forEach(eventObj => 
+					event.push(
+						{'title':eventObj['title'], 
+						'start':eventObj['start'], 
+						'end':eventObj['end'],
+						'eventDisplay':'auto'
+					}));
+				console.log(event);
+
+		    	document.addEventListener('DOMContentLoaded', function() {
 		        var calendarEl = document.getElementById('calendar');
 		        var calendar = new FullCalendar.Calendar(calendarEl, {
 		        	customButtons: {
@@ -29,14 +43,8 @@
 		        		left: 'title',
 		        		center: 'dayGridMonth,timeGridWeek,timeGridDay',
 		        		right: 'addEventButton,today,prev,next'},
-		        	events: [
-		        		{
-		        			id: '1',
-		        			title: 'Dummy',
-		        			start: '2020-09-24',
-		        			end: '2020-09-26',
-		        		}
-		        	]
+		        	events: event,
+		        	displayEventTime: false,
 		        });
 		        calendar.setOption()
 		        calendar.render();
@@ -45,5 +53,10 @@
 			<div id='calendar' style='width:70%; margin-left: 10%;'></div>
 		</div>
 	</div>
+	@else
+		<div class="card-body">
+			<h3>You need to log in. <a href="/login">Click here to login</a></h3>
+		</div>
+	@endif
 </div>
 @endsection

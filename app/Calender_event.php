@@ -17,10 +17,6 @@ class Calender_event extends Model
     	return $this->title;
     }
 
-    public function isAllDay() {
-    	return (bool)$this->all_day;
-    }
-
     public function getStart() {
     	return $this->start;
     }

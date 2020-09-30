@@ -13,7 +13,20 @@
 			page">Add</li>
     	</ol>
 	</nav>
-    <h2>Add Calendar Event</h2>
+    <legend>Add Calendar Event</legend>
+    <form method="POST" action="/calendar/add">
+    	<label>Title:</label><br>
+    	<input type="text" class="form-control" name="title"><br>
+    	@if($errors->has('title'))
+			<span class="text-danger">{{$errors->first('title')}}</span><br><br>
+		@endif
 
+    	<label>Start Date:</label><br>
+    	<input type="date" name="start" value="<?php echo date('Y-m-d'); ?>"><br><br>
+    	<label>End Date:</label><br>
+    	<input type="date" name="end" value="<?php echo date('Y-m-d'); ?>"><br><br>
+    	<button type="submit" class="btn btn-primary">Create Event</button>
+    	{{csrf_field()}}
+    </form>
 </div>
 @endsection
